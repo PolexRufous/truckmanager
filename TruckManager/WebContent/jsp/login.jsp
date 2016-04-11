@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header>
-		<p><img src="img/logo.png" alt="Company logo" />Company name</p>
+		<p><img src="img/logo.jpg" alt="Company logo" />Company name</p>
 		<nav>
 			<ul>
 				<li><a href="">Main</a></li>
