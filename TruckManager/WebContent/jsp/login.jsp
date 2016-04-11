@@ -34,7 +34,7 @@
 
 	<div class="main">
 		<div>
-				<form method="post" action="">
+				<form method="post" action="MainServlet">
 					<input type="hidden" name="posttype" value="LOGIN"></input>
 					<label>Enter your login<br/><input type="text" name="login" placeholder="Your login" required></input></label> <br/>
 					<label>Enter your password<br/><input type="password" name="password" placeholder="Your password" required></input></label><br/>
