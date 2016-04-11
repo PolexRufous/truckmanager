@@ -1,0 +1,30 @@
+div.main
+{
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 79%;
+}
+
+div.main div form
+{
+	text-align: center;
+	border: 3px solid #a0c0a0;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 10px 10px 5px #a0c0a0;
+	margin: 15%;
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+
+input[type=submit]:hover
+{
+	color: #2020ff;
+	text-decoration: underline;
+	border: 1px solid #2020ff;
+	box-shadow: 3px 3px 2px #2020ff;
+	border-radius: 5px;
+}
+

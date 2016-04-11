@@ -1,0 +1,61 @@
+header, header nav
+{
+	background-color: #609060;
+	border: 1px solid #609060;
+	border-radius: 5px;
+}
+
+header nav
+{
+	display: inline-block;
+	width: 98%;
+}
+
+header p img
+{
+	width: 5%;
+	height: auto;
+}
+
+header p
+{
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: cursive;
+	font-size: 200%;
+	text-align: center;
+	margin: 1px;
+	margin-top: 5px;
+}
+
+header nav ul
+{
+	list-style-type: none;
+	display: inline-block;
+	width: 98%;
+}
+
+header nav ul li
+{
+	display: inline-block;
+	width: 24%;
+	margin: 0px;
+	padding: 3px;
+	float: left;
+	border: 2px solid #60b060;
+	border-radius: 5px;
+	color: #ffffff;
+	text-align: center;
+}
+
+header nav ul li:hover
+{
+	text-transform: uppercase;
+	border-color: #6060b0;
+}
+
+nav li a
+{
+	text-decoration: none;
+	color: #ffffff;
+}
