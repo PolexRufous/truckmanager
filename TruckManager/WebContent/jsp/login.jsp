@@ -4,14 +4,14 @@
 <html>
 <head>
 	<title>Main page</title>
-	<link rel="stylesheet" type="text/css" href="../css/header.css" />
-	<link rel="stylesheet" type="text/css" href="../css/footer.css" />
-	<link rel="stylesheet" type="text/css" href="../css/leftside.css" />
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/leftside.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<header>
-		<p><img src="../img/logo.png" alt="Company logo" />Company name</p>
+		<p><img src="img/logo.png" alt="Company logo" />Company name</p>
 		<nav>
 			<ul>
 				<li><a href="">Main</a></li>
