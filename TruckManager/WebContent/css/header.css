@@ -13,6 +13,8 @@ header nav
 
 header p img
 {
+	display: inline-block;
+	float: left;
 	width: 5%;
 	height: auto;
 }
