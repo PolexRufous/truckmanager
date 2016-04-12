@@ -4,6 +4,7 @@
 <html>
 <head>
 	<title>Main page</title>
+	<link rel="icon" type="image/png" href="images/Crab-icon.png" />
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="css/leftside.css" />
@@ -36,8 +37,8 @@
 		<div>
 				<form method="post" action="MainServlet">
 					<input type="hidden" name="posttype" value="LOGIN"></input>
-					<label>Enter your login<br/><input type="text" name="login" placeholder="Your login" required></input></label> <br/>
-					<label>Enter your password<br/><input type="password" name="password" placeholder="Your password" required></input></label><br/>
+					<label>Enter your login<br/><input type="text" name="login" placeholder="Your login" tabindex="1" required></input></label> <br/>
+					<label>Enter your password<br/><input type="password" name="password" placeholder="Your password" tabindex="2" required></input></label><br/>
 					<input type="submit" value="Login"></input>
 				</form>
 		</div>
