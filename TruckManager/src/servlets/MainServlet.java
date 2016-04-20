@@ -42,6 +42,7 @@ public class MainServlet extends HttpServlet {
 		{
 			request.setAttribute("posttype", "LOGIN");
 			request.setAttribute("gettype", "LOGIN");
+			request.setAttribute("forwardpage", "jsp/login.jsp");
 		}
 			
 			checkAndDispatchRequest(request);

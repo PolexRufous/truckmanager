@@ -7,7 +7,14 @@ public class GetDispatcher implements Dispatcher {
 	@Override
 	public void dispatch(HttpServletRequest request) {
 		// TODO Auto-generated method stub
-		helpers.RequestAttributeSetter.setForwardPageLogin(request);
+		if (request.getParameter("gettype") != null)
+		{
+			helpers.RequestAttributeSetter.setForwardPageLogin(request);
+		}
+		else
+		{
+			helpers.RequestAttributeSetter.setForwardPageMain(request);
+		}
 	}
 
 }
