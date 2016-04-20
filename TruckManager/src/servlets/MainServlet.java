@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.GregorianCalendar;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +33,10 @@ public class MainServlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		GregorianCalendar calendar = new GregorianCalendar();
+		calendar.setTimeInMillis(System.currentTimeMillis());
 		
+		System.out.println("Try to connect/ Method" + request.getMethod() + "," + calendar.getTime());
 		
 		if ((!isUserLogged(request)))
 		{

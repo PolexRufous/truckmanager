@@ -37,9 +37,11 @@
 		<div>
 				<form method="post" action="MainServlet">
 					<input type="hidden" name="posttype" value="LOGIN"></input>
-					<label>Enter your login<br/><input type="text" name="login" placeholder="Your login" tabindex="1" required></input></label> <br/>
-					<label>Enter your password<br/><input type="password" name="password" placeholder="Your password" tabindex="2" required></input></label><br/>
+					<label>Enter your login<br/><input type="text" name="userlogin" placeholder="Your login" tabindex="1" required></input></label> <br/>
+					<label>Enter your password<br/><input type="password" name="userpassword" placeholder="Your password" tabindex="2" required></input></label><br/>
 					<input type="submit" value="Login"></input>
+					<p> ${errormessage }</p>
+					<p> ${othermessage }</p>
 				</form>
 		</div>
 	</div>
