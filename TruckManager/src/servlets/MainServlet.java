@@ -33,7 +33,6 @@ public class MainServlet extends HttpServlet {
     
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		logRequest(request);
 		checkLogin(request);
 		checkAndDispatchRequest(request);
@@ -103,7 +102,6 @@ public class MainServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 	
