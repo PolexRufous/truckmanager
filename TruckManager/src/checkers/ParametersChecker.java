@@ -22,17 +22,14 @@ public class ParametersChecker implements Checker{
 		
 		String method = request.getMethod();
 		
-		if(method.equalsIgnoreCase("GET"))
+		
+		if (checkers.get(method) != null)
 		{
-			return new GetParametersChecker().check(request);
-		}
-		else if(method.equalsIgnoreCase("POST"))
-		{
-			return new PostParametersChecker().check(request);
+			return checkers.get(method).check(request);
 		}
 		else
 		{
-			System.out.println("Methods GET or POST was not found");
+			System.out.println("Asked methog cann't be executed");
 			return false;
 		}
 

@@ -10,6 +10,18 @@ public class RequestAttributeSetter {
 		request.setAttribute("othermessage", "Wrong method!");
 	}
 	
+	public static void setWrongMethodTypeAttribute(HttpServletRequest request) 
+	{
+		
+		request.setAttribute("othermessage", "Wrong method type");
+	}
+	
+	public static void setHelloOtherMessage(HttpServletRequest request) 
+	{
+		
+		request.setAttribute("othermessage", "Hello! Please login before continue.");
+	}
+	
 	public static void setForwardPageLogin(HttpServletRequest request)
 	{
 		request.setAttribute("forwardpage", "jsp/login.jsp");
@@ -29,6 +41,11 @@ public class RequestAttributeSetter {
 	public static void setForwardPageMain(HttpServletRequest request)
 	{
 		request.setAttribute("forwardpage", "jsp/main.jsp");
+	}
+	
+	public static void setWrongParametersMessage(HttpServletRequest request)
+	{
+		request.setAttribute("othermessage", "Wrong parameters");;
 	}
 	
 }

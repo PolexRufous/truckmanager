@@ -16,20 +16,19 @@ public class RequestDispather implements Dispatcher {
 	}
 	
 	@Override
-	public void dispatch(HttpServletRequest request) {
+	public void dispatch(HttpServletRequest request) 
+	{
 		
 		String method = request.getMethod().toUpperCase();
 		
-		switch (method) {
-		case "GET": dispatchers.get("GET").dispatch(request);			
-			break;
-		case "POST": dispatchers.get("POST").dispatch(request);			
-			break; 
-		default: 	helpers.RequestAttributeSetter.setWrongMethodAttribute(request);
-					helpers.RequestAttributeSetter.setForwardPageLogin(request);
-			break;
+		if (dispatchers.get(method) != null)
+		{
+			dispatchers.get(method).dispatch(request);
 		}
-		
+		else
+		{
+			helpers.RequestAttributeSetter.setWrongMethodAttribute(request);
+			helpers.RequestAttributeSetter.setForwardPageLogin(request);
+		}
 	}
-
 }

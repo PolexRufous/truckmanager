@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dispatchers.RequestDispather;
+import entityes.persons.User;
 
 
 /**
@@ -33,29 +34,51 @@ public class MainServlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		GregorianCalendar calendar = new GregorianCalendar();
-		calendar.setTimeInMillis(System.currentTimeMillis());
-		
-		System.out.println("Try to connect/ Method" + request.getMethod() + "," + calendar.getTime());
-		
+		logRequest(request);
+		checkLogin(request);
+		checkAndDispatchRequest(request);
+		doForward(request, response);		
+	}
+
+	
+	private void checkLogin(HttpServletRequest request) 
+	{
 		if ((!isUserLogged(request)))
 		{
 			request.setAttribute("posttype", "LOGIN");
 			request.setAttribute("gettype", "LOGIN");
 			request.setAttribute("forwardpage", "jsp/login.jsp");
 		}
-			
-			checkAndDispatchRequest(request);
-			doForward(request, response);
-				
+		else if (request.getParameter("gettype") == null)
+		{
+			request.setAttribute("gettype", "MAIN");
+		}
 	}
 
-	
+	private void logRequest(HttpServletRequest request) {
+		
+		GregorianCalendar calendar = new GregorianCalendar();
+		calendar.setTimeInMillis(System.currentTimeMillis());
+		
+		User user = (User)request.getSession().getAttribute("user");
+		String username;
+		if (user != null)
+		{
+			username = user.getFirstName() + " " + user.getLastName();
+		}
+		else
+		{
+			username = "Undefind";
+		}
+		
+		System.out.println("Try to connect/ Method" + request.getMethod() + "," + calendar.getTime() + ", user - " + username);		
+	}
+
 	private void checkAndDispatchRequest(HttpServletRequest request)
 	{
 		if(!(new checkers.ParametersChecker().check(request)))
 		{
-			request.setAttribute("othermessage", "Wrong parameters");				
+			helpers.RequestAttributeSetter.setWrongParametersMessage(request);				
 		}
 		else
 		{
