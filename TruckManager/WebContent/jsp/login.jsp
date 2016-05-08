@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>Main page</title>
-	<link rel="icon" type="image/png" href="images/Crab-icon.png" />
+	<link rel="icon" type="image/png" href="images/truckico.png" />
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="css/leftside.css" />
