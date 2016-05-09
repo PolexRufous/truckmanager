@@ -1,0 +1,14 @@
+<header>
+	<div>
+		<img src="images/logo.png" alt="Company logo" />
+		<p>Company name</p>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="">Main</a></li>
+			<li><a href="">Usefull</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Personal</a></li>
+		</ul>
+	</nav>
+</header>

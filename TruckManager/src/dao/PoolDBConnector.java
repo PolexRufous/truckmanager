@@ -17,7 +17,6 @@ public class PoolDBConnector implements DBConnector
 		{
 			InitialContext initContext= new InitialContext();
 			DataSource ds = (DataSource) initContext.lookup("java:comp/env/truckmanager");
-			
 			conn = ds.getConnection();
 		}
 		catch (Exception e)

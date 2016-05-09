@@ -2,6 +2,7 @@ package dispatchers.postdispatchers;
 
 import javax.servlet.http.HttpServletRequest;
 
+import dao.stringdao.OrdersDAO;
 import dispatchers.ConcreteDispatcher;
 import helpers.RequestAttributeSetter;
 
@@ -17,6 +18,7 @@ public class LoginDispatcher implements ConcreteDispatcher {
 		{
 			request.getSession().setAttribute("user", user);
 			request.getSession().setAttribute("userpic", "images/" + login + ".jpg"); 
+			request.setAttribute("orderslist", OrdersDAO.getOrderListByUser(user));
 			RequestAttributeSetter.setForwardPageMain(request);
 		}
 		else

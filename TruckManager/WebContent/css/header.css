@@ -1,50 +1,55 @@
-header, header nav
+header
 {
-	background-color: #609060;
-	border: 1px solid #609060;
-	border-radius: 5px;
+	background-color: #a7a7a7;
+	min-height: 10vh;
 }
 
-header nav
+header div
 {
-	display: inline-block;
-	width: 98%;
+	text-align: center;
 }
 
-header p img
+header div img
 {
 	display: inline-block;
 	float: left;
-	width: 5%;
+	width: 30%;
 	height: auto;
 }
 
-header p
+header div p
 {
+	display: block;
 	color: #ffffff;
 	text-transform: uppercase;
 	font-family: cursive;
 	font-size: 200%;
 	text-align: center;
-	margin: 1px;
-	margin-top: 5px;
+	margin: 0 auto;
+}
+
+header nav
+{
+	clear: both;
+	display: block;
+	text-align: center;
 }
 
 header nav ul
 {
 	list-style-type: none;
 	display: inline-block;
-	width: 98%;
+	text-align: center;
 }
 
 header nav ul li
 {
 	display: inline-block;
-	width: 24%;
+	width: 20%;
 	margin: 0px;
 	padding: 3px;
 	float: left;
-	border: 2px solid #60b060;
+	border: 2px solid #303030;
 	border-radius: 5px;
 	color: #ffffff;
 	text-align: center;
@@ -53,7 +58,7 @@ header nav ul li
 header nav ul li:hover
 {
 	text-transform: uppercase;
-	border-color: #6060b0;
+	border-color: #707070;
 }
 
 nav li a

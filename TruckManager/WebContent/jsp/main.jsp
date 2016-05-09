@@ -1,21 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="stylesheet" href="css/general.css" />
-<title>Main page</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Main page</title>
+	<link rel="icon" type="image/png" href="images/truckico.png" />
+	<link rel="stylesheet" type="text/css" href="css/general.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/aside.css" />
+	<link rel="stylesheet" type="text/css" href="css/maingeneral.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 </head>
 <body>
-	<p>Hello ${user.firstName} ${user.lastName}!<p>
-	<p>You was logged in!</p>
-	<img alt="your photo" src=${userpic } />
-	<form action="MainServlet" method="post">
-	<input type="hidden" name="posttype" value="logout" />
-	<input type="submit" value="Logout"/>
-	</form>
-	<p>${errormessage }</p>
-	<p>${othermessage }</p>
+
+<%@include file="/jsp/header.jspf" %>
+<%@include file="/jsp/aside.jspf" %>
+<%@include file="/jsp/mainmain.jspf" %>
+<%@include file="/jsp/footer.jspf" %>
+
+
 </body>
 </html>

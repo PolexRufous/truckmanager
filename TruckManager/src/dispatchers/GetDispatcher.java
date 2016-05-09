@@ -2,6 +2,9 @@ package dispatchers;
 
 import javax.servlet.http.HttpServletRequest;
 
+import dao.stringdao.OrdersDAO;
+import entityes.persons.User;
+
 public class GetDispatcher implements Dispatcher {
 
 	@Override
@@ -18,6 +21,7 @@ public class GetDispatcher implements Dispatcher {
 			}
 			else if (gettype.equals("MAIN"))
 			{
+				request.setAttribute("orderslist", OrdersDAO.getOrderListByUser((User)request.getSession().getAttribute("user")));
 				helpers.RequestAttributeSetter.setForwardPageMain(request);
 			}
 			

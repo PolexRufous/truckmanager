@@ -1,0 +1,36 @@
+<main>
+	<div>
+		<table>
+		
+		<c:forEach var="elem" items="${orderslist }" begin="0" end="0">
+				<tr>
+					<c:forEach var="curelem" items="${elem }">
+						<th>
+							<c:out value="${curelem }" />
+						</th>
+					</c:forEach>
+					
+					<th>
+					Details
+					</th>
+						
+				</tr>	
+			</c:forEach>
+		
+			<c:forEach var="elem" items="${orderslist }" begin="1">
+				<tr>
+					<c:forEach var="curelem" items="${elem }">
+						<td>
+							<c:out value="${curelem }" />
+						</td>
+					</c:forEach>
+					
+					<td>
+						<a href="">Click for details</a>
+					</td>
+					
+				</tr>	
+			</c:forEach>
+		</table>
+	</div>
+</main>

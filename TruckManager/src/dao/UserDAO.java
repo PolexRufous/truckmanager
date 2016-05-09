@@ -35,9 +35,9 @@ public class UserDAO {
 	private static User getUserFromResultSet(ResultSet resultSet) throws SQLException
 	{
 		User user = null;
-		if(resultSet != null)
-		{
-			resultSet.next();
+		
+		if(resultSet.next())
+		{			
 				int ID = resultSet.getInt(1);
 				String firstName = resultSet.getString(2);
 				String lastName = resultSet.getString(3);

@@ -1,0 +1,24 @@
+<aside>
+	<div>
+		<p>You were logged like <br/> ${user.firstName} ${user.lastName}!</p>
+		<p>You can choose actions here</p>
+		<ul>
+			<li><a href="">first</a></li>
+			<li><a href="">second</a></li>
+			<li><a href="">third</a></li>
+			<li><a href="">fourth</a></li>
+		</ul>
+	</div>
+	
+	<br/>
+	<hr/>
+	<br/>
+	
+	<img alt="your photo" src=${userpic } />
+	<form action="MainServlet" method="post">
+		<input type="hidden" name="posttype" value="LOGOUT" />
+		<input type="submit" value="Logout"/>
+	</form>
+	<p>${errormessage }</p>
+	<p>${othermessage }</p>
+</aside>

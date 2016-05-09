@@ -1,0 +1,46 @@
+aside
+{
+	display: inline-block;
+	width: 20%;
+	float: left;
+	background-color: #a7a7a7;
+	min-height: 75vh;
+	color: #ffffff;
+	text-align: center;
+}
+
+aside div
+{
+	display: inline-block;
+}
+
+aside ul
+{
+	color: #ffffff;
+	margin-left: 10px;
+	text-transform: uppercase;
+}
+
+aside ul li
+{
+	text-transform: lowercase;
+	margin-left: 20px;
+
+}
+
+aside ul li a
+{
+	color: #ffffff;	
+}
+
+aside ul li a:hover
+{
+	color: #8080ff;
+}
+
+aside img
+{
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+}

@@ -1,37 +1,57 @@
-div.main
+main
 {
-	float: right;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	width: 79%;
+	min-height: 70vh;
+	float: left;
+	width: 80%;
+
 }
 
-div.main div form
+main div
 {
+	margin: 0 auto;
 	text-align: center;
-	border: 3px solid #a0c0a0;
+	padding-top: 2%;
+	width: 95%;
+	
+}
+
+main div table
+{
+	border-collapse: collapse;
+	border: 2px solid #606060;
+	width: 100%;
+}
+
+main td, main th
+{
+	padding: 5px 5px;
+	border: 2px solid #606060;
+}
+
+main div.logindiv
+{
+	width: 40%;
+	border: 3px solid #a0a0a0;
 	border-radius: 5px;
 	padding: 20px;
-	box-shadow: 10px 10px 5px #a0c0a0;
-	margin: 0 auto;
-	margin-top: 20%;
+	box-shadow: 10px 10px 5px #a7a7a7;
+	margin-top: 10%;
+}
 
+
+main div form
+{
+	display: inline-block;
+	text-align: center;
 }
 
 input[type=submit]
 {
 	border: 1px solid #a0c0a0;
 	border-radius: 5px;
-	margin: 0 auto;
 	margin-top: 2%;
-}
-
-input[type=submit]:hover
-{
-	color: #309030;
-	text-decoration: underline;
-	border: 1px solid #a0c0a0;
-	box-shadow: 3px 3px 2px #a0c0a0;
-	border-radius: 5px;
+	margin-bottom: 2%;
 }
 

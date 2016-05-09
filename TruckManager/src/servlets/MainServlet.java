@@ -67,10 +67,26 @@ public class MainServlet extends HttpServlet {
 		}
 		else
 		{
-			username = "Undefind";
+			username = request.getParameter("userlogin");
+			if (username == null)
+			{
+				username = "Undefind";
+			}
 		}
 		
-		System.out.println("Try to connect/ Method" + request.getMethod() + "," + calendar.getTime() + ", user - " + username);		
+		String methodtype = request.getParameter("gettype");
+		if (methodtype == null)
+		{
+			methodtype = request.getParameter("posttype");
+			if (methodtype == null)
+			{
+				methodtype = "Undefind";
+			}
+		}
+		
+		System.out.println("Log connection/ Method - " + request.getMethod() + ", "
+			+ "method type - " + methodtype + ", "
+			+ "time - " + calendar.getTime() + ", user - " + username);		
 	}
 
 	private void checkAndDispatchRequest(HttpServletRequest request)
